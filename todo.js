@@ -18,23 +18,153 @@ form.addEventListener('submit', (e) => {
   e.preventDefault();
   formValidation();
 });
+// const setError = (element, message) => {
+//   const inputControl = element.parentElement;
+//   const errorDisplay = inputControl.querySelector('.error');
+
+//   errorDisplay.innerText = message;
+//   inputControl.classList.add('error');
+//   inputControl.classList.remove('success')
+// }
+// const setSuccess = element => {
+//   const inputControl = element.parentElement;
+//   const errorDisplay = inputControl.querySelector('.error');
+
+//   errorDisplay.innerText = '';
+//   inputControl.classList.add('success');
+//   inputControl.classList.remove('error');
+// };
+
+
+// const formValidation = () => {
+//   const usernameValue = username.value.trim();
+//   const emailValue = email.value.trim();
+//   const passwordValue = password.value.trim();
+//   const password2Value = password2.value.trim();
+//   if (textInput.value === '') {
+//     console.log('failure');
+//     msg.innerHTML = 'Task cannot be blank';
+//   } else {
+//     console.log('success');
+//     msg.innerHTML = '';
+//     acceptData();
+//     add.setAttribute('data-bs-dismiss', 'modal');
+//     add.click();
+
+//     (() => {
+//       add.setAttribute('data-bs-dismiss', '');
+//     })();
+//   }
+//   if(textInput === '') {
+//       setError(username, 'Task cannot be blank');
+//   } else {
+//       setSuccess(username);
+//   }
+
+//   if(emailValue === '') {
+//       setError(email, 'Email is required');
+//   } else if (!isValidEmail(emailValue)) {
+//       setError(email, 'Provide a valid email address');
+//   } else {
+//       setSuccess(email);
+//   }
+
+//   if(passwordValue === '') {
+//       setError(password, 'Password is required');
+//   } else if (passwordValue.length < 8 ) {
+//       setError(password, 'Password must be at least 8 character.')
+//   } else {
+//       setSuccess(password);
+//   }
+
+//   if(password2Value === '') {
+//       setError(password2, 'Please confirm your password');
+//   } else if (password2Value !== passwordValue) {
+//       setError(password2, "Passwords doesn't match");
+//   } else {
+//       setSuccess(password2);
+//   }
+
+// };
 
 let formValidation = () => {
-  if (textInput.value === '') {
-    console.log('failure');
-    msg.innerHTML = 'Task cannot be blank';
+  if (textInput.value === "") {
+    console.log("failure");
+    msg.innerHTML = "Task cannot be blank";
   } else {
-    console.log('success');
-    msg.innerHTML = '';
+    console.log("success");
+    msg.innerHTML = "";
     acceptData();
-    add.setAttribute('data-bs-dismiss', 'modal');
+    add.setAttribute("data-bs-dismiss", "modal");
     add.click();
 
     (() => {
-      add.setAttribute('data-bs-dismiss', '');
+      add.setAttribute("data-bs-dismiss", "");
     })();
   }
 };
+
+
+// let formValidation = () => {
+//   if (textInput.value === '') {
+//     console.log('failure');
+//     msg.innerHTML = 'Task cannot be blank';
+//   } else {
+//     console.log('success');
+//     msg.innerHTML = '';
+//     acceptData();
+//     add.setAttribute('data-bs-dismiss', 'modal');
+//     add.click();
+
+//     (() => {
+//       add.setAttribute('data-bs-dismiss', '');
+//     })();
+//   }
+//   if (dateInput.value == ''){
+//     console.log('failure');
+//     msg.innerHTML = 'Task must fill';
+//   } else {
+//     console.log('success');
+//     msg.innerHTML = '';
+//     acceptData();
+//     add.setAttribute('data-bs-dismiss', 'modal');
+//     add.click();
+
+//     (() => {
+//       add.setAttribute('data-bs-dismiss', '');
+//     })();
+//   }
+//     (() => {
+//       add.setAttribute('data-bs-dismiss', '');
+//     })();
+//   if(assignInput.value == ''){
+//     console.log('failure');
+//     msg.innerHTML = 'Task must fill';
+//   } else {
+//     console.log('success');
+//     msg.innerHTML = '';
+//     acceptData();
+//     add.setAttribute('data-bs-dismiss', 'modal');
+//     add.click();
+
+//     (() => {
+//       add.setAttribute('data-bs-dismiss', '');
+//     })();
+//   }
+//   if(statusId.value == ''){
+//       console.log('failure');
+//     } else {
+//       console.log('success');
+//       msg.innerHTML = '';
+//       acceptData();
+//       add.setAttribute('data-bs-dismiss', 'modal');
+//       add.click();
+  
+//       (() => {
+//         add.setAttribute('data-bs-dismiss', '');
+//       })();
+//     }
+// };
 
 let data = [{}];
 

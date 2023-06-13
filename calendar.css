@@ -2,7 +2,9 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+  /* font-family: 'Poppins', sans-serif; */
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
   border-radius: 2%;
 }
 /* body {
@@ -79,7 +81,7 @@ body {
   align-items: center;
   justify-content: center;
   padding-bottom: 30px;
-  background-color: #f3f3f3;
+  background-color: #f4e7cd;
 }
 .container {
   position: relative;

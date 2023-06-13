@@ -2,7 +2,9 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+  /* font-family: 'Poppins', sans-serif; */
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
   border-radius: 2%;
 }
 /* body {
@@ -22,11 +24,14 @@
   background-color: #f3f3f3;
   overflow: hidden;
   margin-top: 1%;
+  /* position: absolute; */
 }
 .img-brand {
-  width: 70%;
+  width: 80%;
   height: 50%;
   text-align: left;
+  /* float: left; */
+  margin-left: auto;
 }
 .navbar-brand {
   /* height: 50%; */
@@ -49,17 +54,60 @@
   background-color: #ddd;
   color: black;
 }
+
 .topnav-right {
-  margin-top: 0.7%;
+  margin-top: 0.5%;
   padding: 0.3%;
-  padding-left: 50%;
+  padding-left: 10%;
   height: 50%;
+  float: right;
+  margin-right: 25%;
+  display: contents;
 }
 .topnav-right a {
-  padding-inline: 6.3%;
+  padding-inline: 1.9%;
+  margin-left: 12%;
+  margin-right: -11%;
+  color: #141414;
 }
+
+/* responsif */
+@media (max-width: 650px) {
+  .topnav {
+    padding: 0 20px;
+  }
+
+  .menu-toggle {
+    color: rgb(94, 94, 94);
+    float: right;
+    line-height: 50px;
+    font-size: 24px;
+    cursor: pointer;
+    display: none;
+    display: block;
+  }
+
+  .topnav-right {
+    /* position: absolute; */
+    width: 100%;
+    /* height: calc(100vh - 50px); */
+    /* color: black; */
+    top: 50px;
+    left: -100%;
+    transition: 0.5s all;
+  }
+
+  .topnav-right a {
+    display: block;
+    text-align: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    color: rgb(0, 0, 0);
+  }
+}
+
 head {
-  font-family: 'Times New Roman', Times, serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   align-items: center;
 }
 .mb-3 {
@@ -70,42 +118,45 @@ head {
   text-align: center;
 }
 body {
-  font-family: 'Times New Roman', Times, serif;
-  margin: 80 150px;
-  background-color: #f3f3f3;
-  overflow: hidden;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  /* margin: 50%; */
+  background-color: #f4e7cd;
   display: grid;
   /* justify-content: center; */
   align-items: right;
   height: auto;
-  ;
 }
 
-.app {
-  background-color: #fff;
+/* .app {
+  background-color: rgb(255, 255, 255);
   margin-right: 15%;
   margin-left: 15%;
   background-position: 50%;
   width: auto;
   height: auto;
-  justify-content: space-around;
-  /* border: 5px solid hsl(39, 82%, 50%); */
-  padding: 2%;
+  justify-content: space-around; */
+/* border: 5px solid hsl(39, 82%, 50%); */
+/* padding: 2%;
   overflow-y: scroll;
-}
+} */
 
 .app::-webkit-scrollbar {
   width: 0 !important;
 }
-
+.titletask {
+  display: flex;
+  margin-bottom: 1%;
+  margin-left: 11%;
+}
 #addNew {
   display: flex;
-  margin-left: 5%;
+  margin-left: 15%;
   margin-right: 77%;
   justify-content: space-between;
   align-items: center;
   background-color: #fea17359;
-  padding: 5px 10px;
+  padding: 1%;
   border-radius: 5px;
   cursor: pointer;
   color: rgba(128, 128, 128, 0.423);
@@ -113,12 +164,12 @@ body {
 
 .fa-plus {
   background-color: #f1ca1a;
-  padding: 3px;
-  border-radius: 3px;
+  padding: 0%;
+  border-radius: 0%;
 }
 
 .task h5 {
-  margin-right: 82%;
+  text-align: center;
   height: auto;
   width: auto;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
@@ -132,7 +183,14 @@ body {
   gap: 10%;
   width: auto;
   height: auto;
-  height: 100%;
+  background-color: #fff;
+  margin-right: 15%;
+  margin-left: 15%;
+  background-position: 50%;
+  justify-content: space-around;
+  /* border: 5px solid hsl(39, 82%, 50%); */
+  padding: 2%;
+  overflow-y: auto;
 }
 
 #tasks div {
@@ -141,11 +199,12 @@ body {
   background-position: 20%;
   /* border-radius: 15%; */
   padding: 2%;
-  display: flow-root;
   display: grid;
-  gap: 4px;
+  gap: 1%;
   margin-left: 5%;
   margin-right: 5%;
+  /* width: auto;
+  height: auto; */
 }
 
 #tasks div .options {

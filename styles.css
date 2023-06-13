@@ -23,14 +23,14 @@ body {
   margin-left: 8%;
 }
 .img-home {
-  width: auto;
+  width: 160%;
   height: auto;
-  margin-left: 10%;
+  margin-left: 45%;
   text-align: left;
 }
 .login-form {
   font-size: 130%;
-  margin-left: 18%;
+  margin-left: 40%;
   /* margin-right: 0%; */
   height: 90%;
   /* width: 80%; */

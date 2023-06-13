@@ -4,6 +4,9 @@ let textarea = document.getElementById('textarea');
 let msg = document.getElementById('msg');
 let tasks = document.getElementById('tasks');
 let add = document.getElementById('add');
+let updateform = document.getElementById('form');
+let textInputupdate = document.getElementById('textInputupdate');
+let textareaupdate = document.getElementById('textareaupdate');
 form.addEventListener('submit', (e) => {
   e.preventDefault();
   formValidation();
@@ -29,13 +32,23 @@ let formValidation = () => {
 let data2 = [{}];
 
 let acceptData = () => {
-  data2.push({
-    text: textInput.value,
-    description: textarea.value,
-  });
+  if (updateform.dataset.taskId) {
+    // Update existing task
+    let selectedTaskId = updateform.dataset.taskId;
+    let selectedTask = data2[selectedTaskId];
+    selectedTask.text = textInput.value;
+    selectedTask.description = textarea.value;
 
-  localStorage.setItem('data2', JSON.stringify(data2));
+    localStorage.setItem('data2', JSON.stringify(data2));
+  } else {
+    // Add new Note
+    data2.push({
+      text: textInput.value,
+      description: textarea.value,
+    });
 
+    localStorage.setItem('data2', JSON.stringify(data2));
+  }
   console.log(data2);
   createTasks();
 };
@@ -64,15 +77,24 @@ let deleteTask = (e) => {
   localStorage.setItem('data2', JSON.stringify(data2));
   console.log(data2);
 };
-
 let editTask = (e) => {
   let selectedTask = e.parentElement.parentElement;
-  textInput.value = selectedTask.children[0].innerHTML;
-  textarea.value = selectedTask.children[1].innerHTML;
+  let selectedData = data2[selectedTask.id];
+  textInput.value = selectedData['text'];
+  textarea.value = selectedData['description'];
+  updateform.dataset.taskId = selectedTask.id;
+  console.log(selectedTask.id);
 };
+// let editTask = (e) => {
+
+//   let selectedTask = e.parentElement.parentElement;
+//   textInput.value = selectedTask.children[0].innerHTML;
+//   textarea.value = selectedTask.children[1].innerHTML;
+// };
 
 let resetForm = () => {
   textInput.value = '';
+  delete updateform.dataset.taskId;
 };
 
 (() => {
